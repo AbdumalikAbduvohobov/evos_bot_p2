@@ -1,8 +1,11 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from messages import messages
 
 
-
+def telegram_web_app(lang):
+    url  = "https://abdumalikabduvohobov.github.io/evos_bot_p2/"
+    web_app = WebAppInfo(url=url)
+    return web_app
 
 
 
@@ -13,7 +16,7 @@ def start_buttons(lang):
         [KeyboardButton(text=f"{messages[lang]['about_company']}"),
          KeyboardButton(text=f"{messages[lang]['branches']}")],
         [KeyboardButton(text=f"{messages[lang]['job_positions']}")],
-        [KeyboardButton(text=f"{messages[lang]['menu']}"),
+        [KeyboardButton(text=f"{messages[lang]['menu']}", web_app=telegram_web_app(lang)),
          KeyboardButton(text=f"{messages[lang]['news']}")],
         [
             KeyboardButton(text=f"{messages[lang]['contacts']}"),
