@@ -1,20 +1,46 @@
+body {
+	margin: 0; /* Sahifaning chetlarida bo'sh joy qoldirmaydi */
+	padding: 0; /* Ichki bo'shliqni ham olib tashlaydi */
+	font-size: 18px; /* Matnning o'lchami 18 piksel bo'ladi */
+	color: var(--tg-theme-text-color); /* Matn rangi Telegramning standart rangidan olinadi */
+	background: var(--tg-theme-bg-color); /* Fon rangi Telegramning fonidan olinadi */
+}
+
 .container {
-    max-width: 400px;
-    justify-content: center;
-    text-align: center;
-
-
-}
-.inner-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 200px;
+	max-width: 390px; /* Sahifaning maksimal kengligi 390 piksel, telefonlarda yaxshi ko'rinadi */
 }
 
-.item img {
-    width: 150px;
-    height: 150px;
+.inner {
+	display: grid; /* Mahsulotlarni tarmoq (grid) shaklida joylashtiradi */
+	grid-template-columns: 1fr 1fr; /* Ikki ustun qiladi, har biri teng kenglikda */
+	grid-template-rows: 200px 200px 200px; /* Uch qator qiladi, har biri 200 piksel balandlikda */
 }
-p{
-padding-top: -90px;
+
+.img {
+	width: 150px; /* Har bir rasmning kengligi 150 piksel */
+	max-width: 100px;
+}
+
+.item {
+	text-align: center; /* Har bir mahsulotning matni markazda joylashadi */
+}
+
+.btn {
+	display: inline-block; /* Tugma oddiy blok sifatida ko'rinadi */
+	padding: 10px 20px; /* Tugma ichida 10px yuqori-pastki, 20px yon bo'shliq */
+	border: none; /* Tugma atrofida chegara yo'q */
+	background: rgb(248, 168, 24); /* Tugma foni sariq-nar-inji rang */
+	border-radius: 10px; /* Tugma burchaklari yumaloq bo'ladi */
+	color: #fff; /* Tugma ichidagi matn oq rangda */
+	text-transform: uppercase; /* Matn katta harflarda yoziladi */
+	font-weight: 700; /* Matn qalin (bold) bo'ladi */
+	transition: background .2s linear; /* Fon rangi o'zgarganda 0.2 soniyada silliq o'zgaradi */
+}
+
+.btn:hover {
+	background: lightgreen; /* Tugma ustiga sichqoncha kelsa, fon yashil bo'ladi */
+}
+
+.usercard {
+	text-align: center; /* Foydalanuvchi ismi markazda joylashadi */
 }
