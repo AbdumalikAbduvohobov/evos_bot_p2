@@ -1,61 +1,58 @@
-<!DOCTYPE html> <!-- Bu sahifaning HTML ekanligini bildiradi -->
-<html lang="en"> <!-- Sahifa ingliz tilida bo'ladi -->
-<head> <!-- Sahifaning "boshi", bu yerda sahifa haqida ma'lumotlar yoziladi -->
-    <meta charset="UTF-8"> <!-- Belgilar to'plami, ruscha harflar chiqishi uchun kerak -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Telefonlarda yaxshi ko'rinish uchun sahifani moslashtiradi -->
-    <title>Document</title> <!-- Sahifaning nomi, brauzerda ko'rinadi -->
-    <link rel="stylesheet" href="style.css"> <!-- style.css faylini ulaydi, bu sahifaga dizayn beradi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D13 Bot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body> <!-- Sahifaning "tanasi", bu yerda ko'rinadigan narsalar bo'ladi -->
-<div class="container"> <!-- Asosiy konteyner, hamma narsa shu ichida joylashadi -->
-    <div class="inner"> <!-- Mahsulotlarni ikki ustunga joylashtirish uchun ichki div -->
-        <div class="item"> <!-- Birinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_7.png" alt=""> <!-- 1.png rasmni ko'rsatadi -->
+<body>
+<div class="container">
+    <div class="inner" id="inner">
+        <div class="item">
+            <img src="images/img_1.png" alt="" class="img">
             <p class="price">
-                <b>Burger: </b> 20.000
+                <b>Burger: </b> 12.000
             </p>
-            <button class="btn" id="btn1">Add</button> <!-- "Add" tugmasi, id="btn1" bilan belgilanadi -->
+            <div class="num" id="count1">0</div>
+            <button class="btn remove_btn" id="rbtn1">-</button>
+            <button class="btn add_btn" id="abtn1">+</button>
+
         </div>
-        <div class="item"> <!-- Ikkinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_6.png" alt=""> <!-- 2.png rasmni ko'rsatadi -->
+
+        <div class="item">
+            <img src="images/img_1.png" alt="" class="img">
             <p class="price">
-                <b>Shaurma: </b> 30.000
-            </p>
-            <button class="btn" id="btn2">Add</button> <!-- "Add" tugmasi, id="btn2" bilan belgilanadi -->
+                <b>KFC: </b>
+                120.000</p>
+            <div class="num" id="count2">0</div>
+            <button class="btn remove_btn" id="rbtn2">-</button>
+            <button class="btn add_btn" id="abtn2">+</button>
         </div>
-        <div class="item"> <!-- Uchinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_8.png" alt=""> <!-- 3.png rasmni ko'rsatadi -->
+        <div class="item">
+            <img src="images/img_1.png" alt="" class="img">
             <p class="price">
-                <b>Lavash: </b> 32.000
-            </p>
-            <button class="btn" id="btn3">Add</button> <!-- "Add" tugmasi, id="btn3" bilan belgilanadi -->
+                <b>LAVASH: </b>
+                40.000</p>
+            <div class="num" id="count3">0</div>
+            <button class="btn remove_btn" id="rbtn3">-</button>
+            <button class="btn add_btn" id="abtn3">+</button>
         </div>
-        <div class="item"> <!-- To'rtinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_9.png" alt=""> <!-- 4.png rasmni ko'rsatadi -->
+        <div class="item">
+            <img src="images/img_1.png" alt="" class="img">
             <p class="price">
-                <b>Hot dog: </b> 12.000
-            </p>
-            <button class="btn" id="btn4">Add</button> <!-- "Add" tugmasi, id="btn4" bilan belgilanadi -->
+                <b>PIZZA: </b>
+                50.000</p>
+            <div class="num" id="count4">0</div>
+            <button class="btn remove_btn" id="rbtn4">-</button>
+            <button class="btn add_btn" id="abtn4">+</button>
+
+
         </div>
-        <div class="item"> <!-- Beshinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_10.png" alt=""> <!-- 5.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>Combo: </b> 47.000
-            </p>
-            <button class="btn" id="btn5">Add</button> <!-- "Add" tugmasi, id="btn5" bilan belgilanadi -->
-        </div>
-        <div class="item"> <!-- Oltinchi mahsulot uchun joy -->
-            <img class="img" src="images/img_11.png" alt=""> <!-- 6.png rasmni ko'rsatadi -->
-            <p class="price">
-                <b>France Burger: </b> 35.000
-            </p>
-            <button class="btn" id="btn6">Add</button> <!-- "Add" tugmasi, id="btn6" bilan belgilanadi -->
-        </div>
+
     </div>
+
 </div>
-<div class="usercard" id="usercard"></div> <!-- Foydalanuvchi ismini ko'rsatish uchun bo'sh joy -->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="app.js"></script> <!-- app.js faylini ulaydi, bu sahifaga harakat qo'shadi -->
+<script src="app.js"></script>
 </body>
 </html>

@@ -23,6 +23,11 @@ def start_buttons(lang):
             KeyboardButton(text=f"{messages[lang]['language']}")
         ]
 
+
+
+
+
+
     ],
 
         resize_keyboard=True)
